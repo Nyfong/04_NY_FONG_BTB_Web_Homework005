@@ -17,7 +17,11 @@ export const HomeCardBook = async () => {
                   alt=""
                 />
                 <div className="   absolute bottom-0 left-1/2 transform -translate-x-1/2 ">
-                  <ReadArticalButton />
+                  <ReadArticalButton
+                    id={el.id}
+                    name={"book-categories"}
+                    title={el.book_title}
+                  />
                 </div>
               </div>
               <div className="grid grid-cols-3 md:grid-cols-6 h-full">

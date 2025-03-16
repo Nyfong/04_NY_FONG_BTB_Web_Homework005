@@ -1,5 +1,5 @@
+"use client";
 import { Input } from "@heroui/react";
-
 export const SearchIcon = (props) => {
   return (
     <svg
@@ -29,11 +29,16 @@ export const SearchIcon = (props) => {
     </svg>
   );
 };
-
-export default function SeachBar() {
+const handleSubmit = (e) => {
+  // to prevent the page from reload
+  e.preventDefault();
+};
+export default function SeachBar({ onSearch }) {
   return (
     <div className="  rounded-2xl flex justify-center items-center  text-white ">
       <Input
+        onSubmit={handleSubmit}
+        onChange={(e) => onSearch(e.target.value)}
         isClearable
         classNames={{
           label: "text-black/50 dark:text-white/90",

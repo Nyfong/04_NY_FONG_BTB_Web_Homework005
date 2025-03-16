@@ -22,8 +22,16 @@ export default function Home() {
             <ButtonHomepage data={"Homepage"} />
           </div>
           <div className="flex justify-center gap-4   p-5 rounded">
-            <HomepageCard tagName={"Book"} poster={poster[0]} />
-            <HomepageCard tagName={"Cartoon"} poster={poster[1]} />
+            <HomepageCard
+              tagName={"Book"}
+              poster={poster[0]}
+              url={"/book-categories"}
+            />
+            <HomepageCard
+              tagName={"Cartoon"}
+              poster={poster[1]}
+              url={"/old-school-cartoon"}
+            />
           </div>
         </div>
       </section>

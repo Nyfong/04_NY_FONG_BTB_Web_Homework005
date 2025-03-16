@@ -24,7 +24,7 @@ export const HomeSideBar = () => {
                 <div className="flex p-5 flex-col gap-3 justify-center items-center">
                   {/* username */}
                   <p>Black Monster</p>
-                  <p className="text-teal-300">blackmonster@gmail.com</p>
+                  <p className="text-[#087E8B]">blackmonster@gmail.com</p>
                 </div>
               </div>
             </Link>
@@ -73,104 +73,6 @@ export const HomeSideBar = () => {
                       </span>
                     </Link>
                   ))}
-                {/* <Link
-                  className="flex flex-row items-center  justify-center lg:justify-start rounded-md h-12 focus:outline-none pr-3.5  lg:pr-6 font-semibold text-gray-500 hover:text-primary-400 cursor-pointer "
-                  href="/app/blogs"
-                >
-                  <span className="inline-flex justify-center items-center ml-3.5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1.25rem"
-                      height="1.25rem"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <g opacity="0.50">
-                        <path
-                          d="M21 8H13C12.7348 8 12.4804 7.89464 12.2929 7.70711C12.1054 7.51957 12 7.26522 12 7C12 6.73478 12.1054 6.48043 12.2929 6.29289C12.4804 6.10536 12.7348 6 13 6H21C21.2652 6 21.5196 6.10536 21.7071 6.29289C21.8946 6.48043 22 6.73478 22 7C22 7.26522 21.8946 7.51957 21.7071 7.70711C21.5196 7.89464 21.2652 8 21 8ZM21 12H13C12.7348 12 12.4804 11.8946 12.2929 11.7071C12.1054 11.5196 12 11.2652 12 11C12 10.7348 12.1054 10.4804 12.2929 10.2929C12.4804 10.1054 12.7348 10 13 10H21C21.2652 10 21.5196 10.1054 21.7071 10.2929C21.8946 10.4804 22 10.7348 22 11C22 11.2652 21.8946 11.5196 21.7071 11.7071C21.5196 11.8946 21.2652 12 21 12Z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M21 16H3C2.73478 16 2.48043 15.8946 2.29289 15.7071C2.10536 15.5196 2 15.2652 2 15C2 14.7348 2.10536 14.4804 2.29289 14.2929C2.48043 14.1054 2.73478 14 3 14H21C21.2652 14 21.5196 14.1054 21.7071 14.2929C21.8946 14.4804 22 14.7348 22 15C22 15.2652 21.8946 15.5196 21.7071 15.7071C21.5196 15.8946 21.2652 16 21 16ZM13 20H3C2.73478 20 2.48043 19.8946 2.29289 19.7071C2.10536 19.5196 2 19.2652 2 19C2 18.7348 2.10536 18.4804 2.29289 18.2929C2.48043 18.1054 2.73478 18 3 18H13C13.2652 18 13.5196 18.1054 13.7071 18.2929C13.8946 18.4804 14 18.7348 14 19C14 19.2652 13.8946 19.5196 13.7071 19.7071C13.5196 19.8946 13.2652 20 13 20Z"
-                          fill="currentColor"
-                        />
-                      </g>
-                      <rect
-                        x={2}
-                        y={4}
-                        width={8}
-                        height={8}
-                        rx={2}
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  <span className="ml-0 lg:ml-2 text-sm tracking-wide truncate capitalize hidden lg:block">
-                    Blogs
-                  </span>
-                </Link>
-                <Link
-                  className="flex flex-row items-center  justify-center lg:justify-start rounded-md h-12 focus:outline-none pr-3.5  lg:pr-6 font-semibold text-gray-500 hover:text-primary-400 cursor-pointer "
-                  href="/app/clients"
-                >
-                  <span className="inline-flex justify-center items-center ml-3.5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1.25rem"
-                      height="1.25rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M24 5a3 3 0 1 1-6 0a3 3 0 0 1 6 0m-6.766 2.464l-1.537 1.28c-1.026.856-1.738 1.447-2.34 1.834c-.582.375-.977.5-1.357.5s-.774-.125-1.357-.5c-.601-.386-1.314-.978-2.34-1.834L5.928 6.765a.825.825 0 0 0-1.056 1.268l2.416 2.014c.975.812 1.765 1.47 2.463 1.92c.726.466 1.434.762 2.25.762c.814 0 1.522-.296 2.249-.763c.697-.448 1.487-1.107 2.462-1.92l1.666-1.388a4.5 4.5 0 0 1-1.144-1.194"
-                      />
-                      <path
-                        fill="currentColor"
-                        d="M18.454 6.587a.825.825 0 0 1 .958.959a3 3 0 0 1-.958-.959"
-                      />
-                      <path
-                        fill="currentColor"
-                        d="M16.958 3.021C16.156 3 15.244 3 14.2 3H9.8C5.652 3 3.577 3 2.289 4.318S1 7.758 1 12s0 6.364 1.289 7.682S5.652 21 9.8 21h4.4c4.148 0 6.223 0 7.511-1.318S23 16.242 23 12c0-1.067 0-2-.02-2.82a4.4 4.4 0 0 1-1.98.468c-2.485 0-4.5-2.06-4.5-4.603c0-.726.165-1.413.458-2.024"
-                        opacity=".5"
-                      />
-                    </svg>
-                  </span>
-                  <span className="ml-0 lg:ml-2 text-sm tracking-wide truncate capitalize hidden lg:block">
-                    Mail
-                  </span>
-                </Link>
-                <Link
-                  className="flex flex-row items-center  justify-center lg:justify-start rounded-md h-12 focus:outline-none pr-3.5  lg:pr-6 font-semibold bg-primary-50 shadow-sm text-primary-400 font-bold "
-                  href="/app/projects"
-                >
-                  <span className="inline-flex justify-center items-center ml-3.5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1.25rem"
-                      height="1.25rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M2 12c0 5.523 4.477 10 10 10h9.25a.75.75 0 0 0 0-1.5h-3.98A9.99 9.99 0 0 0 22 12c0-5.523-4.477-10-10-10S2 6.477 2 12"
-                        opacity=".5"
-                      />
-                      <path
-                        fill="currentColor"
-                        fillRule="evenodd"
-                        d="M12 15.75a3.75 3.75 0 1 1 0-7.5a3.75 3.75 0 0 1 0 7.5"
-                        clipRule="evenodd"
-                      />
-                      <path
-                        fill="currentColor"
-                        d="M5.5 13a1 1 0 1 0 0-2a1 1 0 0 0 0 2M12 4.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2m1 14a1 1 0 1 0-2 0a1 1 0 0 0 2 0m5.5-5.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
-                      />
-                    </svg>
-                  </span>
-                  <span className="ml-0 lg:ml-2 text-sm tracking-wide truncate capitalize hidden lg:block">
-                    projects
-                  </span>
-                </Link> */}
               </div>
 
               {/* setting */}
