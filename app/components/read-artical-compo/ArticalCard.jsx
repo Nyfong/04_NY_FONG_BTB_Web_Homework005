@@ -28,7 +28,7 @@ export default async function ArticalCard({ id, name }) {
                 title={data?.book_title ?? data.ct_title}
               />
             </div>
-            <div className="absolute right-0 top-10">
+            <div className="absolute right-10 top-10">
               <Link href={""}>
                 <div className="flex items-center justify-center  ">
                   <div className="overflow-hidden  h-[400px]  bg-red-400 cursor-pointer rounded-xl relative group shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] ">

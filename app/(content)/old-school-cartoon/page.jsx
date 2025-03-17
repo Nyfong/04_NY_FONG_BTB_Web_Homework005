@@ -1,26 +1,29 @@
-import React from "react";
-import { ButtonHomepage } from "@/app/components/common/Button";
-import SearchBar from "@/app/components/common/SearchBar";
-import Filter from "@/app/components/common/Filter";
-import { HomeCardBook } from "@/app/components/bookcompo/CardBook";
-import CardCartoon from "@/app/components/cartooncompo/CardCartoon";
-export default function BookCategories() {
+import PageDisplay from "@/app/components/cartooncompo/PageDisplay";
+import {
+  getAllBookCategory,
+  getAllBookCategoryById,
+} from "@/app/services/bookService";
+import { getAllBook } from "@/app/services/bookService";
+import { getAllCartoonCategoryById } from "@/app/services/cartoonService";
+import {
+  getAllCartoon,
+  getAllCartoonCategory,
+} from "@/app/services/cartoonService";
+export default async function BookCategories({}) {
+  const categoryBook = await getAllBookCategory();
+  const categoryCartoon = await getAllCartoonCategory();
+  const allCartoon = await getAllCartoon();
+  const category = [categoryBook, categoryCartoon];
+  const catgById = await getAllCartoonCategoryById(null);
+  console.log("this is in the page cartoon : ", category);
+  const data = "valid";
   return (
-    <section className="grid-cols-1 px-10">
-      <div className="py-5">
-        <SearchBar />
-      </div>
-      <div className="rounded-2xl bg-white h-auto py-5 flex flex-col ">
-        <div className="p-5 flex justify-between">
-          <ButtonHomepage data={"Old School Cartoon"} />
-          <Filter />
-        </div>
-
-        {/* Add book list or other content here */}
-        <div className="h-screen scrollbar-hidden  overflow-y-scroll">
-          <CardCartoon />
-        </div>
-      </div>
-    </section>
+    <PageDisplay
+      searchUrl={data}
+      data={category}
+      allCartoon={allCartoon}
+      catgId={allCartoon}
+      allCartoonCat={categoryCartoon}
+    />
   );
 }

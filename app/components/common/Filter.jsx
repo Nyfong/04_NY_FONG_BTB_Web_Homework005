@@ -1,14 +1,19 @@
-import { Slider } from "@heroui/react";
+// import { getAllBookCategory } from "@/app/services/bookService";
+// import { getAllCartoonCategory } from "@/app/services/cartoonService";
 
-export default function Filter() {
-  return (
-    <Slider
-      className="max-w-md"
-      defaultValue={0.4}
-      label="Temperature"
-      maxValue={1}
-      minValue={0}
-      step={0.01}
-    />
-  );
+//server
+// import { getAllBookCategory } from "@/app/services/bookService";
+// import { getAllCartoonCategory } from "@/app/services/cartoonService";
+// import FilterClient from "../filterclient/FilterClient";
+export default function Filter({ searchUrl, data }) {
+  //const category = await getAllBookCategory();
+  // const category =
+  //   searchUrl != null
+  //     ? await getAllCartoonCategory()
+  //     : await getAllBookCategory();
+  // console.log("this is the category", category);
+  // console.log("this is the search url:", searchUrl);
+  // const category = await getAllCartoonCategory();
+
+  return <FilterClient category={data} />;
 }

@@ -1,3 +1,4 @@
+"use server";
 import Test from "@/app/components/common/BreadCrumb";
 import ArticalCard from "@/app/components/read-artical-compo/ArticalCard";
 import React from "react";

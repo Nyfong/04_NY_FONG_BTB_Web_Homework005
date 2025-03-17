@@ -1,13 +1,20 @@
 import { Button } from "@heroui/react";
 import Link from "next/link";
-export function ButtonHomepage({ data }) {
+export function ButtonHomepage({
+  data,
+  searchCategory,
+  allBookCat,
+  allCartoonCat,
+}) {
+  console.log("ppp", allCartoonCat);
+  console.log("adasdas", allBookCat);
   return (
     <div className="flex gap-4 items-center">
-      {/* <Button size="sm">Small</Button> */}
       <Button size="md" className="bg-gray-200 text-sm text-teal-500">
-        {data}
+        {allBookCat?.[searchCategory - 1]?.book_cate_name ??
+          allCartoonCat?.[searchCategory - 1]?.cartoon_genre ??
+          data}
       </Button>
-      {/* <Button size="lg">Large</Button> */}
     </div>
   );
 }
