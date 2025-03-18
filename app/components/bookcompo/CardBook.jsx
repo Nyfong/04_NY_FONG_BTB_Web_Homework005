@@ -46,10 +46,8 @@ export const HomeCardBook = ({
                     <div className="md:col-span-2 "></div>
                     <div className="col-span-2 md:col-span-4 px-6 md:px-8 flex flex-col gap-3 justify-center">
                       <p className="font-bold text-md">{el.book_title}</p>
-                      <p className="text-gray-300 text-sm text-[#0B3954]">
-                        The novel's enduring themes of self-discovery and
-                        ethical living continue to resonate, prompting
-                        reflections on how one should live a meaningful life.
+                      <p className="text-gray-300 text-sm text-[#0B3954] line-clamp-3">
+                        {el.description}
                       </p>
                     </div>
                   </div>
@@ -82,10 +80,8 @@ export const HomeCardBook = ({
                       <div className="md:col-span-2 "></div>
                       <div className="col-span-2 md:col-span-4 px-6 md:px-8 flex flex-col gap-3 justify-center">
                         <p className="font-bold text-md">{el.book_title}</p>
-                        <p className="text-gray-300 text-sm text-[#0B3954]">
-                          The novel's enduring themes of self-discovery and
-                          ethical living continue to resonate, prompting
-                          reflections on how one should live a meaningful life.
+                        <p className="text-gray-300 text-sm text-[#0B3954] line-clamp-3">
+                          {el.description}
                         </p>
                       </div>
                     </div>
@@ -115,10 +111,8 @@ export const HomeCardBook = ({
                     <div className="md:col-span-2 "></div>
                     <div className="col-span-2 md:col-span-4 px-6 md:px-8 flex flex-col gap-3 justify-center">
                       <p className="font-bold text-md">{el.book_title}</p>
-                      <p className="text-gray-300 text-sm text-[#0B3954]">
-                        The novel's enduring themes of self-discovery and
-                        ethical living continue to resonate, prompting
-                        reflections on how one should live a meaningful life.
+                      <p className="text-gray-300 text-sm text-[#0B3954] line-clamp-3">
+                        {el.description}
                       </p>
                     </div>
                   </div>

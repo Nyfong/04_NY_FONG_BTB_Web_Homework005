@@ -1,5 +1,5 @@
 import { Card, CardBody, CardFooter, Image } from "@heroui/react";
-import eye from "../../assets/book.png";
+import eye from "../../assets/eye.png";
 
 import Link from "next/link";
 export default function CardCartoon({
@@ -54,14 +54,18 @@ export default function CardCartoon({
                   </div>
 
                   <div className="w-full flex justify-between items-center">
-                    <Image
-                      src={eye}
-                      height="20"
-                      width="20"
-                      alt="views"
-                      className="mr-1"
-                    />
-                    {/* <p>{item.published_year.split("-")[0]}</p> */}
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={
+                          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Eye_open_font_awesome_green.svg/1200px-Eye_open_font_awesome_green.svg.png"
+                        }
+                        width={20}
+                        alt="views"
+                        className="mr-1"
+                      />
+                      <p>{item.view_count} times</p>
+                    </div>
+                    <p>{item.published_year.split("-")[0]}</p>
                   </div>
                 </CardFooter>
               </Card>
@@ -98,14 +102,18 @@ export default function CardCartoon({
                     </div>
 
                     <div className="w-full flex justify-between items-center">
-                      <Image
-                        src={eye}
-                        height="20"
-                        width="20"
-                        alt="views"
-                        className="mr-1"
-                      />
-                      {/* <p>{item.published_year.split("-")[0]}</p> */}
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Eye_open_font_awesome_green.svg/1200px-Eye_open_font_awesome_green.svg.png"
+                          }
+                          width={20}
+                          alt="views"
+                          className="mr-1"
+                        />
+                        <p>{item.view_count} times</p>
+                      </div>
+                      <p>{item.published_year.split("-")[0]}</p>
                     </div>
                   </CardFooter>
                 </Card>
@@ -139,14 +147,18 @@ export default function CardCartoon({
                   </div>
 
                   <div className="w-full flex justify-between items-center">
-                    <Image
-                      src={eye}
-                      height="20"
-                      width="20"
-                      alt="views"
-                      className="mr-1"
-                    />
-                    {/* <p>{item.published_year.split("-")[0]}</p> */}
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={
+                          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Eye_open_font_awesome_green.svg/1200px-Eye_open_font_awesome_green.svg.png"
+                        }
+                        width={20}
+                        alt="views"
+                        className="mr-1"
+                      />
+                      <p>{item.view_count} times</p>
+                    </div>
+                    <p>{item.published_year.split("-")[0]}</p>
                   </div>
                 </CardFooter>
               </Card>
