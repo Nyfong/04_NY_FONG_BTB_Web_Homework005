@@ -16,7 +16,7 @@ export default async function BookCategories() {
       searchUrl={data}
       data={category}
       allBook={allBook}
-      catgId={catgById}
+      catgId={allBook}
       allBookCat={categoryBook}
     />
   );

@@ -1,9 +1,14 @@
+"use client";
 import Link from "next/link";
 import { navList } from "@/app/lib/nav-list";
 import Image from "next/image";
 import book from "../../assets/book.png";
+import { usePathname } from "next/navigation";
+
 export const HomeSideBar = () => {
+  const pathname = usePathname();
   const data = navList;
+
   return (
     <>
       <div className=" bg-white ">
@@ -43,8 +48,10 @@ export const HomeSideBar = () => {
                   data.map((el) => (
                     <Link
                       key={el.id}
-                      className="flex flex-row items-center  justify-center lg:justify-start rounded-md h-12 focus:outline-none pr-3.5  lg:pr-6 font-semibold text-gray-500 hover:text-primary-400 cursor-pointer "
-                      href={el.url}
+                      className={`flex flex-row items-center ${
+                        el?.url == pathname ? "bg-gray-200" : ""
+                      } justify-center lg:justify-start rounded-md h-12 focus:outline-none pr-3.5  lg:pr-6 font-semibold text-gray-500 hover:text-primary-400 cursor-pointer `}
+                      href={el?.url ?? "/"}
                     >
                       <span className="inline-flex justify-center items-center ml-3.5">
                         {el?.icon ? (

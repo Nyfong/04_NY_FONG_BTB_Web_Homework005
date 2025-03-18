@@ -13,11 +13,11 @@ export default function PageDisplay({
   allCartoonCat,
   catgId,
   allCartoon,
+  searchapi,
 }) {
   const searchParams = useSearchParams();
   const search = searchParams.get("query");
-  console.log("object", allCartoonCat);
-  //console.log("aaa",catgId);
+  const searchTitle = searchParams.get("searchResult");
   return (
     <section className="grid-cols-1 px-10">
       <div className="py-5">
@@ -41,6 +41,8 @@ export default function PageDisplay({
             allCartoon={allCartoon}
             searchCategory={search}
             catgId={catgId}
+            searchapi={searchapi}
+            searchTitle={searchTitle}
           />
         </div>
       </div>

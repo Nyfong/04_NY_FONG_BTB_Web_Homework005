@@ -9,12 +9,14 @@ import {
   getAllCartoon,
   getAllCartoonCategory,
 } from "@/app/services/cartoonService";
+import { searchByTitleCartoon } from "@/app/services/bookService";
 export default async function BookCategories({}) {
   const categoryBook = await getAllBookCategory();
   const categoryCartoon = await getAllCartoonCategory();
   const allCartoon = await getAllCartoon();
   const category = [categoryBook, categoryCartoon];
   const catgById = await getAllCartoonCategoryById(null);
+  const searchapi = await searchByTitleCartoon(null);
   console.log("this is in the page cartoon : ", category);
   const data = "valid";
   return (
@@ -24,6 +26,7 @@ export default async function BookCategories({}) {
       allCartoon={allCartoon}
       catgId={allCartoon}
       allCartoonCat={categoryCartoon}
+      searchapi={searchapi}
     />
   );
 }

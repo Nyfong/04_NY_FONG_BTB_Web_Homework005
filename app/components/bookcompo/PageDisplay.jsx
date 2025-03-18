@@ -16,7 +16,8 @@ export default function PageDisplay({
 }) {
   const searchParams = useSearchParams();
   const search = searchParams.get("query");
-  console.log("categ", catgId);
+  const searchTitle = searchParams.get("searchResult");
+
   return (
     <section className="grid-cols-1 px-10">
       <div className="py-5">
@@ -38,6 +39,7 @@ export default function PageDisplay({
             allBook={allBook}
             searchCategory={search}
             catgId={catgId}
+            searchTitle={searchTitle}
           />
         </div>
       </div>

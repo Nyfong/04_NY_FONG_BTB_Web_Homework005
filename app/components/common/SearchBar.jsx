@@ -1,5 +1,6 @@
 "use client";
 import { Input } from "@heroui/react";
+import { useRouter } from "next/navigation";
 export const SearchIcon = (props) => {
   return (
     <svg
@@ -29,16 +30,20 @@ export const SearchIcon = (props) => {
     </svg>
   );
 };
-const handleSubmit = (e) => {
-  // to prevent the page from reload
-  e.preventDefault();
-};
+
 export default function SeachBar({ onSearch }) {
+  const router = useRouter();
+  const handleSubmit = (e) => {
+    // to prevent the page from reload
+    e.preventDefault();
+  };
+
   return (
     <div className="  rounded-2xl flex justify-center items-center  text-white ">
       <Input
         onSubmit={handleSubmit}
-        onChange={(e) => onSearch(e.target.value)}
+        // onChange={(e) => onSearch(e.target.value)}
+        onChange={(e) => router.replace(`?searchResult=${e.target.value}`)}
         isClearable
         classNames={{
           label: "text-black/50 dark:text-white/90",
